@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Gatsby ⚛︎ - Shopify 🛒 Store`,
+    description: `Find all of the things you need!`,
+    author: `@igocooper`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -11,6 +11,15 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-shopify`,
+      options: {
+        shopName: `gatsby-igocooper-store`,
+        accessToken: `17b2c4e07d79aedaa90d3b00c127b128`,
+        verbose: true,
+        paginationSize: 250
       },
     },
     `gatsby-transformer-sharp`,
